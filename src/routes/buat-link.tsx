@@ -52,7 +52,7 @@ function LinkGenerator() {
     [baseInput],
   );
 
-  const buildLink = (guestName: string) => `${baseUrl}/invite/${nameToSlug(guestName)}`;
+  const buildLink = (guestName: string) => `${baseUrl}/${nameToSlug(guestName)}`;
 
   const [bulk, setBulk] = useState<{ wb: import("xlsx").WorkBook; fileName: string; count: number } | null>(null);
 
