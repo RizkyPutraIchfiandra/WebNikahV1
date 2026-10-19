@@ -1,1508 +1,207 @@
-# Javanese Shadow Tale
+<div align="center">
 
-Siap. Ini versi full prompt final yang sudah gue gabungkan semuanya, termasuk revisi wayang miring + bergerak diagonal dari bawah ke atas, supaya bisa langsung lu kasih ke AI coding tool.
+# WebNikahV1
 
-Buat sebuah website undangan pernikahan digital premium yang elegan, romantis, cinematic, modern, dan memiliki sentuhan budaya Indonesia/Jawa.
+**Undangan pernikahan digital dwibahasa untuk Dimas & Intan.** Versi pertama — tema hangat *mocha, sand, champagne*: galeri, peta lokasi, RSVP realtime, dan pemutar musik.
 
-Website harus terasa seperti luxury wedding invitation, bukan seperti template undangan generik atau dashboard.
+[![Live](https://img.shields.io/badge/Live-dimasintan.vercel.app-6b4f36?logo=vercel&logoColor=white)](https://dimasintan.vercel.app)
 
-Gunakan React + TypeScript + Vite + Tailwind CSS + Framer Motion dan buat seluruh website benar-benar responsive serta interactive.
+![Preview](docs/screens/cover.jpg)
 
----
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![TanStack Start](https://img.shields.io/badge/TanStack%20Start-1.x-FF4154?logo=react&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-8-646CFF?logo=vite&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind%20CSS-4-06B6D4?logo=tailwindcss&logoColor=white)
+![shadcn/ui](https://img.shields.io/badge/shadcn%2Fui-Radix-000000?logo=shadcnui&logoColor=white)
+![Leaflet](https://img.shields.io/badge/Leaflet-OpenStreetMap-199900?logo=leaflet&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-000000?logo=vercel&logoColor=white)
 
-1. CREATIVE DIRECTION
-
-Tema
-
-Konsep utama:
-
-Modern Luxury Javanese Wedding
-
-Gabungkan:
-
-- Elegant modern wedding
-
-- Traditional Indonesian/Javanese aesthetic
-
-- Wayang kulit
-
-- Floral ornaments
-
-- Warm luxury
-
-- Minimalist editorial design
-
-- Cinematic animation
-
-Website harus terasa:
-
-- romantic
-
-- warm
-
-- elegant
-
-- intimate
-
-- luxurious
-
-- sophisticated
-
-- premium
-
-Jangan membuatnya terlalu ramai.
+</div>
 
 ---
 
-2. COLOR PALETTE
+## About
 
-Gunakan warna utama:
+Undangan satu halaman yang dibagikan lewat WhatsApp dengan link personal per tamu (`/nama-tamu`), sehingga nama tamu langsung muncul di layar pembuka. Ini **versi pertama** dengan palet hangat kecoklatan; penerusnya bertema emerald ada di [WebNikahV2](https://github.com/RizkyPutraIchfiandra/WebNikahV2).
 
-- Dark Chocolate Brown
+**Yang bisa dilakukan tamu:**
 
-- Chocolate Brown
+- **Buka undangan** dari layar sampul, musik latar menyala mengikuti ketukan tombol.
+- **Ganti bahasa** ID ⇄ EN kapan saja, termasuk tanggal panjang dan pesan WhatsApp.
+- **Lihat rangkaian acara** akad & resepsi, plus simpan ke kalender lewat berkas `.ics`.
+- **Buka lokasi** di peta OpenStreetMap atau lanjut ke Google Maps.
+- **Kirim RSVP & ucapan** yang tampil langsung di buku tamu.
+- **Salin nomor rekening** untuk hadiah, satu ketukan.
 
-- Medium Brown
+## Screens
 
-- Light Brown
+<table>
+<tr>
+<td width="50%">
 
-- Beige
+![Hero](docs/screens/home.jpg)
+**Hero** — potret mempelai, tanggal, dan navigasi ke seluruh bagian.
 
-- Cream
+</td>
+<td width="50%">
 
-- Ivory
+![Mempelai](docs/screens/couple.jpg)
+**Mempelai** — profil kedua mempelai beserta nama orang tua.
 
-- White
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-Gunakan gradient lembut seperti:
+![Love Story](docs/screens/story.jpg)
+**Love Story** — perjalanan hubungan dalam alur kronologis.
 
-Dark Brown → Chocolate → Beige → Cream → White
+</td>
+<td width="50%">
 
-Tambahkan sedikit aksen:
+![Acara](docs/screens/event.jpg)
+**Rangkaian Acara** — akad & resepsi, peta lokasi, tombol kalender.
 
-- champagne
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-- muted gold
+![Galeri](docs/screens/gallery.jpg)
+**Galeri** — carousel foto dengan lightbox.
 
-Gold hanya digunakan sebagai accent tipis, jangan terlalu mencolok.
+</td>
+<td width="50%">
 
-Hindari:
+![RSVP](docs/screens/rsvp.jpg)
+**RSVP & Ucapan** — konfirmasi kehadiran dan buku tamu.
 
-- neon
+</td>
+</tr>
+<tr>
+<td width="50%">
 
-- warna terlalu saturated
+![Hadiah](docs/screens/gift.jpg)
+**Hadiah** — kartu rekening Mandiri & BCA dengan tombol salin.
 
-- gradient berlebihan
+</td>
+<td width="50%">
 
-- warna pink terang
+</td>
+</tr>
+</table>
 
-- UI yang terlihat seperti website SaaS.
+## Built with
 
----
+| Technology | What it does here |
+| --- | --- |
+| [TanStack Start](https://tanstack.com/start) + [TanStack Router](https://tanstack.com/router) | Kerangka full-stack dengan file-based routing dan server-side rendering. |
+| [React](https://react.dev) 19 + [TypeScript](https://www.typescriptlang.org) 5 | Kerangka UI dengan tipe ketat. |
+| [Nitro](https://nitro.build) | Server runtime hasil build, siap deploy ke Vercel maupun Cloudflare. |
+| [Vite](https://vite.dev) 8 | Build tool dan dev server. |
+| [Tailwind CSS](https://tailwindcss.com) 4 | Styling utility, palet hangat didefinisikan sebagai token `oklch`. |
+| [shadcn/ui](https://ui.shadcn.com) + [Radix UI](https://www.radix-ui.com) | Komponen dasar yang mudah diakses: dialog, carousel, form, tooltip. |
+| [Motion](https://motion.dev) | Transisi masuk antar bagian dan animasi kartu. |
+| [Embla Carousel](https://www.embla-carousel.com) | Carousel galeri dengan dukungan swipe. |
+| [React Hook Form](https://react-hook-form.com) + [Zod](https://zod.dev) | Formulir RSVP beserta validasinya. |
+| [Leaflet](https://leafletjs.com) + OpenStreetMap | Peta lokasi tanpa API key. |
+| [SheetJS](https://sheetjs.com) | Impor/ekspor Excel di generator link tamu. |
+| [Vercel](https://vercel.com) | Hosting hasil build Nitro. |
 
-3. TYPOGRAPHY
+## Getting started
 
-Gunakan kombinasi typography:
+### Prerequisites
 
-Wedding Names
+- [Bun](https://bun.sh) 1.1+ (atau Node.js 20+ dengan `npm`)
 
-Elegant serif / luxury editorial font.
+### 1. Install
 
-Body
-
-Clean modern sans-serif.
-
-Accent
-
-Optional handwritten/calligraphy font.
-
-Nama pasangan harus menjadi typography paling dominan.
-
-Gunakan hierarchy yang jelas.
-
----
-
-4. OVERALL VISUAL STYLE
-
-Gunakan:
-
-- lots of whitespace
-
-- soft shadows
-
-- thin borders
-
-- subtle glassmorphism
-
-- elegant rounded corners
-
-- floral ornaments
-
-- organic shapes
-
-- subtle grain texture
-
-- paper texture
-
-- soft light effects
-
-Tambahkan decorative floral elements di beberapa section.
-
-Bunga harus:
-
-- elegant
-
-- thin
-
-- botanical
-
-- subtle
-
-- tidak terlalu ramai.
-
----
-
-5. OPENING / ONBOARDING
-
-Ini adalah bagian paling penting dan harus menjadi signature visual website.
-
-Saat website pertama kali dibuka, tampilkan full-screen cinematic opening.
-
-Jangan langsung menampilkan seluruh website.
-
----
-
-BACKGROUND
-
-Gunakan full-screen background:
-
-dark chocolate brown → warm brown → cream gradient
-
-Tambahkan:
-
-- subtle paper texture
-
-- subtle film grain
-
-- soft light
-
-- floral ornaments
-
-- tiny floating particles
-
-- beberapa petals.
-
----
-
-6. SIGNATURE WAYANG KULIT
-
-Gunakan siluet wayang kulit Jawa tradisional.
-
-Wayang bukan sekadar gambar dekorasi.
-
-Wayang harus menjadi bagian dari animation experience.
-
-Posisi Wayang
-
-Wayang harus berada dalam posisi:
-
-MIRING / DIAGONAL
-
-Jangan berdiri lurus.
-
-Gunakan rotation sekitar:
-
-15–30 degrees
-
-Wayang dapat ditempatkan sedikit:
-
-- ke kiri
-
-  atau
-
-- ke kanan.
-
-Jangan selalu tepat di tengah.
-
-Sebagian tubuh wayang boleh berada di luar viewport.
-
----
-
-7. INITIAL WAYANG POSITION
-
-Ketika opening pertama kali muncul:
-
-Wayang berada di:
-
-bagian bawah layar
-
-Sebagian besar tubuhnya masih berada di luar viewport.
-
-Contoh visual:
-
-┌──────────────────────────────┐
-
-│                              │
-
-│       THE WEDDING OF         │
-
-│                              │
-
-│         RAKA & ALYA          │
-
-│                              │
-
-│                              │
-
-│                         ╱    │
-
-│                      ╱       │
-
-│                   ╱          │
-
-│                ╱             │
-
-│             ╱                │
-
-└──────────╱───────────────────┘
-
-           WAYANG
-
-Wayang harus terasa seperti baru muncul dari bawah layar.
-
----
-
-8. WAYANG MOTION
-
-Animasi utama:
-
-BOTTOM → TOP
-
-Tetapi jangan sekadar menggunakan:
-
-"translateY(-100%)"
-
-Gerakannya harus terasa cinematic.
-
-Gunakan kombinasi:
-
-- translateY
-
-- translateX
-
-- rotate
-
-- scale
-
-- opacity
-
-Motion path:
-
-bottom → diagonal upward → upper area
-
-Contohnya:
-
-START
-
-             │
-
-             │
-
-             │
-
-             │
-
-             │
-
-          ╱  │
-
-       ╱     │
-
-    ╱        │
-
- ╱           │
-
-WAYANG       │
-
-─────────────┘
-
-             ↓
-
-             ╱
-
-           ╱
-
-         ╱
-
-       ╱
-
-     ╱
-
-   ╱
-
- ╱
-
-Wayang bergerak perlahan dari bawah menuju atas.
-
----
-
-9. WAYANG ANIMATION FEEL
-
-Gerakan harus terasa seperti:
-
-graceful + slow + cinematic + traditional + luxurious
-
-Gunakan easing seperti:
-
-- easeOutCubic
-
-- easeOutQuint
-
-- custom cubic-bezier
-
-Durasi:
-
-2–3 seconds
-
-Jangan gunakan:
-
-- bounce
-
-- cartoon movement
-
-- elastic berlebihan
-
-- rotation ekstrem.
-
-Saat mencapai posisi akhir, berikan sedikit overshoot lalu settle dengan lembut.
-
----
-
-10. OPENING ANIMATION SEQUENCE
-
-Urutan opening:
-
-Step 1
-
-Background muncul.
-
-Step 2
-
-Floral ornaments fade-in.
-
-Step 3
-
-Subtle particles/petals mulai bergerak.
-
-Step 4
-
-Wayang muncul dari bawah.
-
-Step 5
-
-Wayang bergerak diagonal dari bawah ke atas.
-
-Step 6
-
-Typography muncul perlahan:
-
-THE WEDDING OF
-
-Step 7
-
-Nama pasangan muncul:
-
-Raka & Alya
-
-Step 8
-
-Tanggal muncul:
-
-12 . 12 . 2026
-
-Step 9
-
-Guest card muncul:
-
-Kepada Yth.
-
-Bapak/Ibu/Saudara/i
-
-[Nama Tamu]
-
-Step 10
-
-Button muncul:
-
-BUKA UNDANGAN
-
-Gunakan staggered animation.
-
----
-
-11. GUEST PERSONALIZATION
-
-Support URL parameter:
-
-?to=Andi%20Pratama
-
-Jika URL:
-
-?to=Andi%20Pratama
-
-tampilkan:
-
-Kepada Yth.
-
-Bapak/Ibu/Saudara/i
-
-Andi Pratama
-
-Jika tidak ada parameter:
-
-Kepada Yth.
-
-Bapak/Ibu/Saudara/i
-
-Jangan menyebabkan error jika parameter kosong.
-
----
-
-12. OPEN INVITATION TRANSITION
-
-Ketika user menekan:
-
-BUKA UNDANGAN
-
-Jangan langsung mengganti halaman.
-
-Buat cinematic transition.
-
-Urutan:
-
-1. Button melakukan subtle press animation.
-
-2. Wayang kembali bergerak ke atas.
-
-3. Wayang keluar dari viewport.
-
-4. Floral ornaments fade.
-
-5. Background dark brown berubah perlahan menjadi cream/ivory.
-
-6. Main hero muncul dari bawah dengan smooth reveal.
-
-7. Music mulai dimainkan setelah user interaction.
-
-8. Opening screen menghilang.
-
-Transition harus terasa seperti:
-
-Wayang naik → layar terbuka → wedding invitation revealed.
-
----
-
-13. HERO SECTION
-
-Hero harus langsung terlihat premium.
-
-Background:
-
-cream / ivory / white.
-
-Gunakan:
-
-brown → cream → white gradient
-
-Tambahkan floral ornaments di:
-
-- top-left
-
-- top-right
-
-- bottom corners.
-
-Isi:
-
-THE WEDDING OF
-
-RAKA & ALYA
-
-12 . 12 . 2026
-
-Tambahkan decorative divider.
-
-Gunakan subtle floating petals.
-
----
-
-14. COUNTDOWN
-
-Section:
-
-Menuju Hari Bahagia
-
-Realtime countdown:
-
-- DAYS
-
-- HOURS
-
-- MINUTES
-
-- SECONDS
-
-Countdown otomatis menuju tanggal wedding.
-
-Gunakan elegant cards.
-
-Card:
-
-- cream translucent
-
-- subtle border
-
-- soft shadow
-
-- rounded corners.
-
----
-
-15. QUOTE / VERSE
-
-Buat section minimalis.
-
-Contoh:
-
-«"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang."»
-
-— QS. Ar-Rum: 21
-
-Typography elegant.
-
-Tambahkan floral ornament kecil.
-
----
-
-16. COUPLE SECTION
-
-Title:
-
-Meet The Couple
-
-Tampilkan dua profile:
-
-Bride
-
-- Photo
-
-- Full name
-
-- Nickname
-
-- Parents
-
-Groom
-
-- Photo
-
-- Full name
-
-- Nickname
-
-- Parents
-
-Desktop:
-
-dua profile berdampingan.
-
-Mobile:
-
-stack vertical.
-
-Tambahkan elegant floral divider.
-
----
-
-17. LOVE STORY
-
-Title:
-
-Our Story
-
-Buat vertical timeline.
-
-Contoh:
-
-2021
-
-First Meet
-
-2022
-
-First Date
-
-2023
-
-Growing Together
-
-2025
-
-The Proposal
-
-2026
-
-Our Wedding
-
-Animation ketika scrolling:
-
-- line reveal
-
-- fade
-
-- slide-up
-
-- image reveal.
-
----
-
-18. WEDDING EVENT
-
-Title:
-
-Wedding Celebration
-
-Buat dua card.
-
-Akad Nikah
-
-Tanggal:
-
-Saturday, 12 December 2026
-
-Waktu:
-
-08.00 – 10.00 WIB
-
-Resepsi
-
-Tanggal:
-
-Saturday, 12 December 2026
-
-Waktu:
-
-11.00 – 14.00 WIB
-
-Gunakan icon:
-
-- calendar
-
-- clock
-
-- location.
-
-Tambahkan:
-
-Add to Calendar
-
----
-
-19. LOCATION
-
-Title:
-
-Where To Find Us
-
-Tampilkan:
-
-- Venue Name
-
-- Full Address
-
-- OpenStreetMap
-
-- marker location.
-
-Gunakan:
-
-Leaflet + OpenStreetMap
-
-Map harus:
-
-- interactive
-
-- zoomable
-
-- responsive
-
-- memiliki marker
-
-- popup nama venue.
-
-Tambahkan button:
-
-Open Maps
-
-Gunakan configuration:
-
-VENUE_NAME
-
-VENUE_ADDRESS
-
-LATITUDE
-
-LONGITUDE
-
-GOOGLE_MAPS_URL
-
-Jangan hardcode lokasi asli.
-
----
-
-20. PHOTO GALLERY
-
-Title:
-
-Our Moments
-
-Gunakan editorial masonry gallery.
-
-Campurkan:
-
-- portrait
-
-- landscape
-
-- square.
-
-Jangan semua gambar memiliki ukuran sama.
-
-Ketika image diklik:
-
-Fullscreen Lightbox
-
-Features:
-
-- next
-
-- previous
-
-- close
-
-- image counter.
-
-Animation:
-
-- fade
-
-- scale
-
-- smooth zoom.
-
-Gunakan lazy loading.
-
----
-
-21. VIDEO
-
-Title:
-
-Our Video
-
-Buat cinematic video card.
-
-Support:
-
-- YouTube
-
-- MP4
-
-- video URL.
-
-Video:
-
-- rounded corners
-
-- subtle shadow
-
-- poster image.
-
-Video tidak autoplay dengan suara.
-
----
-
-22. BACKGROUND MUSIC
-
-Tambahkan wedding background music.
-
-Buat floating music player di kanan bawah.
-
-Design:
-
-- circular button
-
-- music icon
-
-- rotating disc/vinyl.
-
-Saat music ON:
-
-disc berputar perlahan.
-
-Saat OFF:
-
-disc berhenti.
-
-Browser autoplay policy harus diperhatikan.
-
-Music baru mulai setelah user menekan:
-
-BUKA UNDANGAN
-
-Tampilkan visual state:
-
-Music ON
-
-Music OFF
-
-Music URL harus configurable.
-
----
-
-23. WEDDING GIFT
-
-Title:
-
-Wedding Gift
-
-Text:
-
-"Doa restu Anda merupakan hadiah terindah bagi kami. Namun apabila ingin memberikan tanda kasih, kami menyediakan fitur Wedding Gift."
-
-Buat elegant bank cards.
-
-Contoh:
-
-Bank Mandiri
-
-Nama:
-
-Raka Pratama
-
-No. Rekening:
-
-1234567890
-
-Button:
-
-Salin Nomor Rekening
-
-BCA
-
-Nama:
-
-Alya Putri
-
-No. Rekening:
-
-0987654321
-
-Button:
-
-Salin Nomor Rekening
-
-Gunakan placeholder.
-
-Ketika copy:
-
-Toast:
-
-Nomor rekening berhasil disalin ✓
-
-Tambahkan optional:
-
-QRIS
-
-Gunakan image placeholder yang mudah diganti.
-
----
-
-24. RSVP
-
-Title:
-
-RSVP
-
-Form:
-
-Nama
-
-Kehadiran:
-
-- Akan Hadir
-
-- Tidak Dapat Hadir
-
-Jumlah Tamu
-
-Ucapan / Pesan
-
-Button:
-
-Kirim RSVP
-
-Validation harus bekerja.
-
-Setelah submit:
-
-Success state:
-
-Terima kasih atas konfirmasinya 🤍
-
-Architecture harus siap dihubungkan ke:
-
-- Supabase
-
-- Firebase
-
-- Google Sheets
-
-- REST API.
-
----
-
-25. WEDDING WISHES
-
-Title:
-
-Wedding Wishes
-
-Tampilkan ucapan dari tamu.
-
-Card:
-
-Nama
-
-Pesan
-
-Timestamp
-
-Tambahkan form untuk mengirim ucapan.
-
-Gunakan pagination/infinite scroll jika data banyak.
-
----
-
-26. OPTIONAL DRESS CODE
-
-Title:
-
-Dress Code
-
-Contoh:
-
-Formal
-
-Earth Tone
-
-Brown / Beige / Cream
-
-Tampilkan color swatches.
-
----
-
-27. FLORAL ANIMATIONS
-
-Gunakan floral elements sebagai decorative layer.
-
-Bunga dan daun dapat:
-
-- fade-in
-
-- float
-
-- slow parallax
-
-- move slightly ketika scroll.
-
-Tambahkan beberapa falling petals.
-
-Tetap subtle.
-
-Jangan mengganggu text.
-
----
-
-28. SCROLL ANIMATIONS
-
-Semua section memiliki scroll reveal.
-
-Gunakan:
-
-- fade-in
-
-- slide-up
-
-- scale
-
-- parallax
-
-- stagger
-
-- image reveal
-
-Animasi:
-
-slow + smooth + elegant
-
-Jangan membuat website terasa seperti gaming website.
-
-Support:
-
-"prefers-reduced-motion"
-
-Jika enabled, kurangi animation.
-
----
-
-29. NAVIGATION
-
-Buat floating navigation.
-
-Desktop:
-
-Home
-
-Couple
-
-Story
-
-Event
-
-Gallery
-
-Gift
-
-RSVP
-
-Mobile:
-
-gunakan bottom navigation compact.
-
-Navigation harus:
-
-- sticky/floating
-
-- translucent
-
-- blur
-
-- elegant
-
-- responsive.
-
-Gunakan smooth scrolling.
-
----
-
-30. RESPONSIVE DESIGN
-
-Mobile-first.
-
-Support:
-
-360px
-
-390px
-
-414px
-
-768px
-
-1024px
-
-1440px+
-
-Pastikan:
-
-- no horizontal overflow
-
-- text tidak terpotong
-
-- button mudah ditekan
-
-- gallery responsive
-
-- map responsive
-
-- navigation responsive
-
-- wayang tidak menutupi text.
-
-Pada mobile, wayang tetap:
-
-miring + diagonal + bottom → top
-
----
-
-31. WAYANG RESPONSIVE
-
-Mobile:
-
-- scale down sesuai viewport.
-
-- tetap diagonal.
-
-- sebagian body boleh keluar layar.
-
-- jangan menutupi nama pasangan.
-
-Desktop:
-
-- ukuran lebih besar.
-
-- lebih off-center.
-
-- gunakan parallax.
-
-Wayang harus tetap menjadi focal decorative element.
-
----
-
-32. CENTRAL CONFIG
-
-Semua wedding data harus berada di satu file:
-
-src/data/weddingConfig.ts
-
-Struktur kira-kira:
-
-couple
-
-  brideName
-
-  brideFullName
-
-  brideParents
-
-  bridePhoto
-
-  groomName
-
-  groomFullName
-
-  groomParents
-
-  groomPhoto
-
-event
-
-  weddingDate
-
-  akadTime
-
-  receptionTime
-
-  venueName
-
-  venueAddress
-
-  latitude
-
-  longitude
-
-  mapsUrl
-
-media
-
-  galleryImages
-
-  videoUrl
-
-  musicUrl
-
-gift
-
-  banks
-
-  qris
-
-guest
-
-  guestName
-
-Jangan menyebarkan data wedding ke banyak component.
-
-Semua harus mudah diganti.
-
----
-
-33. COMPONENT ARCHITECTURE
-
-Gunakan struktur:
-
-src/
-
-├── components/
-
-│   ├── OpeningScreen/
-
-│   ├── Hero/
-
-│   ├── Countdown/
-
-│   ├── Quote/
-
-│   ├── Couple/
-
-│   ├── LoveStory/
-
-│   ├── Event/
-
-│   ├── Location/
-
-│   ├── Gallery/
-
-│   ├── Video/
-
-│   ├── Gift/
-
-│   ├── RSVP/
-
-│   ├── Wishes/
-
-│   ├── MusicPlayer/
-
-│   ├── Navigation/
-
-│   └── FloralDecorations/
-
-│
-
-├── data/
-
-│   └── weddingConfig.ts
-
-│
-
-├── assets/
-
-│   ├── flowers/
-
-│   ├── wayang/
-
-│   ├── photos/
-
-│   └── music/
-
-│
-
-└── App.tsx
-
-Gunakan reusable components.
-
----
-
-34. TECH STACK
-
-Gunakan:
-
-- React
-
-- TypeScript
-
-- Vite
-
-- Tailwind CSS
-
-- Framer Motion
-
-- Lucide React
-
-- Leaflet
-
-- OpenStreetMap
-
-- React Hook Form
-
-- Zod
-
-Gunakan clean architecture.
-
----
-
-35. PERFORMANCE
-
-Optimalkan:
-
-- lazy loading images
-
-- responsive images
-
-- lazy loading video
-
-- compressed assets
-
-- efficient animations
-
-- CSS transforms
-
-- avoid unnecessary re-renders
-
-- optimized fonts.
-
-Target:
-
-Excellent Lighthouse Performance
-
----
-
-36. ACCESSIBILITY
-
-Implement:
-
-- semantic HTML
-
-- alt text
-
-- keyboard navigation
-
-- focus state
-
-- aria-label
-
-- sufficient contrast
-
-- reduced motion support.
-
----
-
-37. FINAL CLOSING
-
-Buat final section:
-
-Terima Kasih
-
-"Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Anda berkenan hadir dan memberikan doa restu."
-
-Raka & Alya
-
-Tambahkan:
-
-- large floral ornament
-
-- subtle wayang silhouette
-
-- cream background
-
-- elegant typography.
-
----
-
-38. FINAL PAGE FLOW
-
-Urutan:
-
-OPENING / ONBOARDING
-
-↓
-
-HERO
-
-↓
-
-COUNTDOWN
-
-↓
-
-QUOTE
-
-↓
-
-COUPLE
-
-↓
-
-LOVE STORY
-
-↓
-
-EVENT
-
-↓
-
-LOCATION + OPENSTREETMAP
-
-↓
-
-GALLERY
-
-↓
-
-VIDEO
-
-↓
-
-WEDDING GIFT
-
-↓
-
-RSVP
-
-↓
-
-WEDDING WISHES
-
-↓
-
-DRESS CODE
-
-↓
-
-CLOSING
-
----
-
-39. MOST IMPORTANT VISUAL REQUIREMENT
-
-Jangan membuat website ini terlihat seperti template AI biasa.
-
-Prioritaskan art direction.
-
-Signature visual website adalah:
-
-WAYANG KULIT JAWA YANG MIRING/DIAGONAL, MUNCUL DARI BAWAH LAYAR, BERGERAK PERLAHAN KE ATAS SECARA DIAGONAL, DENGAN SUBTLE ROTATION, PARALLAX, DAN CINEMATIC EASING.
-
-Opening harus terasa seperti sebuah cinematic wedding intro.
-
-Bayangkan perpaduan:
-
-Traditional Javanese Shadow Puppet × Luxury Wedding Editorial × Cinematic Motion Design × Warm Chocolate & Cream Palette
-
-Website harus terasa mahal, intimate, elegant, romantic, dan memorable.
-
-Jangan mengorbankan aesthetics demi terlalu banyak fitur. Semua fitur harus tetap memiliki visual hierarchy yang bersih.
-
-Jika asset asli belum tersedia, gunakan placeholder yang mudah diganti dan buat semua functionality tetap berjalan.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/ddb977e1-5aa2-4974-9e33-23ae691e6a5c).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+```bash
+git clone https://github.com/RizkyPutraIchfiandra/WebNikahV1.git
+cd WebNikahV1
+bun install
 ```
+
+### 2. Run
+
+```bash
+bun run dev
+```
+
+Data acara (nama, tanggal, lokasi, rekening) ada di satu berkas: [`src/data/weddingConfig.ts`](src/data/weddingConfig.ts).
+
+### 3. Build
+
+```bash
+bun run build
+bun run preview   # pratinjau hasil build
+```
+
+## Link tamu
+
+Satu link personal per tamu — nama otomatis muncul di sampul undangan.
+
+```
+https://dimasintan.vercel.app/suparmini
+https://dimasintan.vercel.app/bu-ati
+```
+
+Buka `/buat-link` untuk membuat link massal dari berkas Excel daftar tamu.
+
+## Project structure
+
+```
+.
+├── docs/
+│   └── screens/                Screenshot untuk README
+├── src/
+│   ├── components/
+│   │   ├── OpeningScreen/      Layar sampul + tombol "Buka Undangan"
+│   │   ├── Hero/               Hero potret mempelai
+│   │   ├── Countdown/          Hitung mundur hari H
+│   │   ├── Couple/             Profil kedua mempelai
+│   │   ├── LoveStory/          Love Story kronologis
+│   │   ├── EventDetails/       Rangkaian acara + peta Leaflet
+│   │   ├── Gallery/            Carousel Embla + lightbox
+│   │   ├── RSVP/               Formulir RSVP & buku tamu
+│   │   ├── Gift/               Kartu rekening + tombol salin
+│   │   ├── MusicPlayer/        Pemutar musik latar
+│   │   ├── FloralDecorations/  Ornamen bunga SVG
+│   │   ├── Quote/              Kutipan ayat
+│   │   ├── Closing/            Bagian penutup
+│   │   ├── Navigation/         Navigasi atas & bilah bawah
+│   │   ├── LanguageButton/     Pengalih bahasa ID/EN
+│   │   ├── common/             Komponen bersama
+│   │   └── ui/                 shadcn/ui primitives
+│   ├── data/weddingConfig.ts   Sumber tunggal data acara
+│   ├── hooks/                  use-mobile, dll
+│   ├── lib/
+│   │   ├── i18n.tsx            Kamus & context dwibahasa ID/EN
+│   │   ├── guestbook.ts        Penyimpanan RSVP & ucapan
+│   │   ├── guestSlug.ts        Slug tamu ⇄ nama
+│   │   └── utils.ts            Helper className
+│   ├── routes/
+│   │   ├── index.tsx           Halaman undangan
+│   │   ├── $guest.tsx          Rute link tamu /nama-tamu
+│   │   ├── buat-link.tsx       Generator link tamu
+│   │   └── __root.tsx          Shell + halaman galat
+│   ├── server.ts               Entry server (Nitro)
+│   ├── start.ts                Entry client
+│   └── styles.css              Design token palet hangat
+└── vite.config.ts              Konfigurasi build
+```
+
+## Scripts
+
+| Command | What it does |
+| --- | --- |
+| `bun run dev` | Jalankan dev server |
+| `bun run build` | Build produksi (Nitro) |
+| `bun run preview` | Pratinjau hasil build |
+| `bun run lint` | ESLint |
+| `bun run format` | Prettier |
+
+## License
+
+Dibuat untuk acara pribadi Dimas & Intan. Silakan jadikan referensi; ganti data di `src/data/weddingConfig.ts` dan foto di `src/assets` kalau mau dipakai ulang.
